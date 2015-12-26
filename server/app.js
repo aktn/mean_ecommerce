@@ -29,6 +29,11 @@ app.get('/a', function(req, res) {
     res.send('Welcome to the home page!');
 });
 
+if (config.seedDB) {
+    console.log('Seeding Database');
+    require('./config/seed');
+}
+
 require('./routes')(app);
 
 
