@@ -22,9 +22,6 @@ mongoose.connect(config.mongo.database);
 
 app.use(express.static(__dirname+'/../public'));
 
-//var apiRoutes = require('./app/routes/api')(app, express);
-//app.use('/api', apiRoutes);
-
 app.get('/a', function(req, res) {
     res.send('Welcome to the home page!');
 });
