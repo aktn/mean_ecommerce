@@ -1,5 +1,10 @@
 angular.module('MEAN_Ecommerce',[
     'ngAnimate',
     'app.routes',
-    'productCtrl'
+    'productCtrl',
+    'productService',
+    'adminProduct.routes',
+    'adminProductCtrl',
+    'adminProductService'
+
 ]);
