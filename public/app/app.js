@@ -5,6 +5,9 @@ angular.module('MEAN_Ecommerce',[
     'productService',
     'adminProduct.routes',
     'adminProductCtrl',
-    'adminProductService'
+    'adminProductService',
+    'adminUser.routes',
+    'adminUserCtrl',
+    'adminUserService'
 
 ]);

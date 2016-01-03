@@ -1,15 +1,15 @@
-angular.module('userCtrl', ['userService'])
+angular.module('adminUserCtrl',['adminUserService'])
 
-    .controller('userController', function(User) {
-
+    .controller('admin_UserController', function(User){
         var vm = this;
         vm.processing = true;
 
         User.all()
-            .success(function(data) {
-
+            .success(function(data){
                 vm.processing = false;
                 vm.users = data;
             });
 
     });
+
+
