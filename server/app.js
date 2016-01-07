@@ -5,6 +5,7 @@ var morgan = require('morgan');
 var mongoose = require('mongoose');
 var config = require('./config/env/development');
 var path = require('path');
+var jwt = require('jsonwebtoken');
 
 app.use(bodyParser.urlencoded({extended: true }));
 app.use(bodyParser.json());

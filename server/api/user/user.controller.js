@@ -1,5 +1,9 @@
 var User = require('./user.model');
 var path = require('path');
+var jwt = require('jsonwebtoken');
+var config     = require('../../config/env/development');
+var superSecret = config.secret;
+
 
 exports.index = function(req, res){
     User.find({}, function(err, users){
@@ -50,3 +54,6 @@ exports.destroy = function(req, res) {
         res.json({message : 'User has been deleted!'});
     });
 };
+
+
+
