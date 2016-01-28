@@ -41,13 +41,13 @@ Product.find({}).remove(function(){
             title: 'mouse',
             stock: 5,
             price: 30,
-            description: 'Suitable for all users',
+            description: 'Suitable for all users.html',
             imageUrl: '/assets/uploads/1.jpg'
         },{
             title: 'lens',
             stock: 10,
             price: 8,
-            description: 'Suitable for all users',
+            description: 'Suitable for all users.html',
             imageUrl: '/assets/uploads/1.jpg'},
         function()
         {

@@ -30,7 +30,7 @@ function isAuthenticated(req, res) {
                     name: user.name,
                     username: user.username
                 }, superSecret, {
-                    expiresInMinutes: 120
+                    expiresInMinutes: 1
                 });
 
                 res.json({

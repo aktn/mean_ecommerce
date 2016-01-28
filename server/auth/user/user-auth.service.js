@@ -46,9 +46,8 @@ function isAuthenticated(req, res) {
 
     });
 }
-
 /*
-app.use(function isAuthenticated(req, res, next) {
+.use(function isAuthenticated(req, res, next) {
 
     console.log('Somebody just came to our app!');
     var token = req.body.token || req.query.token || req.headers['x-access-token'];
@@ -78,8 +77,6 @@ app.use(function isAuthenticated(req, res, next) {
 });
 
 */
-
-
 exports.auth = isAuthenticated;
 
 

@@ -15,7 +15,6 @@ angular.module('productCtrl',['productService'])
     .controller('productDetailsController', function($routeParams, Product) {
 
         var vm = this;
-        vm.type = 'edit';
 
         Product.get($routeParams.product_id)
             .success(function(data) {

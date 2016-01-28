@@ -4,16 +4,16 @@ angular.module('app.routes', ['ngRoute'])
 
         $routeProvider
 
-            // show all users
+            // show all users.html
             .when('/products', {
-                templateUrl: 'app/products/templates/product-list.html',
+                templateUrl: 'app/products/views/product-list.html',
                 controller: 'productController',
                 controllerAs: 'product'
             })
 
 
             .when('/products/:product_id', {
-                templateUrl: 'app/products/templates/product-details.html',
+                templateUrl: 'app/products/views/product-details.html',
                 controller: 'productDetailsController',
                 controllerAs: 'product'
             });

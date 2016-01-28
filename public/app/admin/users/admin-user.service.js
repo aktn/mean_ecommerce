@@ -5,7 +5,7 @@ angular.module('adminUserService', [])
         var adminUserFactory = {};
 
         adminUserFactory.all = function(){
-            return $http.get('/api/users/');
+            return $http.get('/api/users.html/');
         };
 
 
