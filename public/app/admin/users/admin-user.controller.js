@@ -1,4 +1,4 @@
-angular.module('adminUserCtrl',['adminUserService'])
+angular.module('adminCtrl',['adminUserService'])
 
     .controller('admin_UserController', function(User){
         var vm = this;

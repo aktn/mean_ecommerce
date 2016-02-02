@@ -6,15 +6,17 @@ angular.module('MEAN_Ecommerce',[
     'adminProductCtrl',
     'adminProductService',
    
-    'adminUserCtrl',
+    'userLogInCtrl',
     'adminUserService',
     'user.routes',
     'userCtrl',
-    'adminLogInCtrl',
+    'adminCtrl',
     'adminAuthService',
     'admin.routes',
     'userAuthService',
     'userLogInCtrl',
-    'userService'
+    'userProService',
+    'userSignUpService',
+    'users'
 
 ]);

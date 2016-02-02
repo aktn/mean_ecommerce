@@ -37,8 +37,4 @@ angular.module('userLogInCtrl', ['userAuthService'])
             $location.path('/login');
         };
 
-        client.createSample = function() {
-            userAuth.createSampleUser();
-        };
-
     });

@@ -16,6 +16,12 @@ angular.module('user.routes', ['ngRoute'])
                 controllerAs: 'user'
             })
 
+            .when('/signup', {
+                templateUrl : 'app/user/signUp/user-signup.html',
+                controller  : 'userCreateController',
+                controllerAs: 'user'
+            })
+
           
 
            ;

@@ -1,4 +1,4 @@
-angular.module('adminLogInCtrl', ['adminAuthService'])
+angular.module('adminCtrl', ['adminAuthService'])
 
     .controller('adminLogInController', function($rootScope, $location, adminAuth) {
 

@@ -1,13 +1,24 @@
-angular.module('userCtrl', ['userService'])
+angular.module('userCtrl', ['userSignUpService'])
 
-   
 
     .controller('userDetailsController', function($routeParams, User) {
 
-        var vm = this;
+    var udc = this;
 
-        User.get($routeParams.user_id)
-            .success(function(data) {
-                vm.userData = data;
-            });
-    });
+    User.get($routeParams.user_id)
+        .success(function(data) {
+            udc.userData = data;
+        });
+
+ });
+
+
+
+
+
+
+
+
+
+
+
