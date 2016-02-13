@@ -13,7 +13,8 @@ angular.module('user.routes', ['ngRoute'])
             .when('/users/:user_id', {
                 templateUrl : 'app/user/profile/views/user-details.html',
                 controller  : 'userDetailsController',
-                controllerAs: 'user'
+                controllerAs: 'user',
+                access: {restricted: true}
             })
 
             .when('/signup', {

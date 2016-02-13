@@ -1,5 +1,5 @@
 
-<form class="form-horizontal" ng-submit="product.saveProduct()">
+<form class="form-horizontal" ng-submit="product.editProduct()">
 
     <div class="form-group">
         <label class="col-sm-2 control-label">Title</label>
@@ -36,3 +36,13 @@
     </div>
 
 </form>
+
+<div class="row show-hide-message" ng-show="product.message">
+    <div class="col-sm-6 col-sm-offset-2">
+        
+        <div class="alert alert-info">
+            {{ product.message }}
+        </div>
+
+    </div>
+</div>

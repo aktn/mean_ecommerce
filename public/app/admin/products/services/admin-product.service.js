@@ -17,6 +17,14 @@ angular.module('adminProductService', [])
             return $http.put('/api/products/'+id,productData);
         };
 
+        adminProductFactory.create = function(productData){
+            return $http.post('/api/products/',productData);
+        };
+
+        adminProductFactory.delete = function(id) {
+        return $http.delete('/api/products/' + id);
+    };
+
 
         return adminProductFactory;
     });

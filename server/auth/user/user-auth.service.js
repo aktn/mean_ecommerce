@@ -4,8 +4,6 @@ var jwt = require('jsonwebtoken');
 var config     = require('../../config/env/development');
 var compose = require('composable-middleware');
 var superSecret = config.secret;
-var express = require('express');
-var app = express();
 
 function isAuthenticated(req, res) {
 

@@ -17,6 +17,8 @@ angular.module('MEAN_Ecommerce',[
     'userLogInCtrl',
     'userProService',
     'userSignUpService',
+    
     'users'
 
 ]);
+

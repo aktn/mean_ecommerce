@@ -16,7 +16,6 @@ angular.module('admin.routes', ['ngRoute'])
                 controllerAs: 'product'
             })
 
-
             .when('/admin/products/:product_id', {
                 templateUrl: 'app/admin/products/views/admin.product-details.html',
                 controller: 'admin_ProductDetailsController',
@@ -33,7 +32,13 @@ angular.module('admin.routes', ['ngRoute'])
                 templateUrl: 'app/admin/users/views/admin.user-list.html',
                 controller: 'admin_UserController',
                 controllerAs: 'adminUser'
-            });
+            })
+
+             .when('/admin/upload/products', {
+                templateUrl: 'app/admin/products/views/admin.product-upload.html',
+                controller: 'admin_ProductUploadController',
+                controllerAs: 'product'
+             });
 
         $locationProvider.html5Mode(true);
 

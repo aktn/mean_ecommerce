@@ -9,7 +9,10 @@ var config     = require('../../config/env/development');
 var compose = require('composable-middleware');
 var superSecret = config.secret;
 
-router.post('/', function isAuthenticated(req, res) {
+
+
+var apiRouter = express.Router();
+apiRouter.post('/', function isAuthenticated(req, res) {
 
     User.findOne({
         email: req.body.email
@@ -48,9 +51,9 @@ router.post('/', function isAuthenticated(req, res) {
 
     });
 });
-/*
 
-router.use(function(req, res, next) {
+
+apiRouter.use(function(req, res, next) {
 
     console.log('Somebody just came to our app!');
     var token = req.body.token || req.query.token || req.headers['x-access-token'];
@@ -77,7 +80,11 @@ router.use(function(req, res, next) {
         });
 
     }
-});*/
+});
 
-module.exports = router;
+apiRouter.get('/me', function(req, res) {
+        res.send(req.decoded);
+    });
+
+module.exports = apiRouter;
 

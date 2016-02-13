@@ -6,7 +6,7 @@ var productSchema = new Schema({
     price       : { type: Number },
     stock       : { type: Number, default: 1},
     description : String,
-    // imageBin    : { data: Buffer, contentType: String},
+    imageBin    : { data: Buffer, contentType: String},
     imageUrl    : String
 });
 

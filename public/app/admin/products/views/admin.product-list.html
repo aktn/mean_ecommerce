@@ -17,8 +17,10 @@
             <td>{{ item.description }}</td>
             <td>
                 <a ng-href="admin/products/{{ item._id }}" class="btn btn-info">Check</a>
+                <a href="#" ng-click="product.deleteProduct(item._id)" class="btn btn-primary">Delete</a>
             </td>
         </tr>
         </tbody>
     </table>
 </div>
+
