@@ -17,7 +17,7 @@ angular.module('MEAN_Ecommerce',[
     'userLogInCtrl',
     'userProService',
     'userSignUpService',
-    
+    'ngCart',
     'users'
 
 ]);

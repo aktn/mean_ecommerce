@@ -16,6 +16,12 @@ angular.module('app.routes', ['ngRoute'])
                 templateUrl: 'app/products/views/product-details.html',
                 controller: 'productDetailsController',
                 controllerAs: 'product'
+            })
+
+            .when('/checkout', {
+            templateUrl : 'app/products/views/product-checkout.html',
+            controller  : 'productCheckoutController',
+            controllerAs: 'product'
             });
 
         $locationProvider.html5Mode(true);

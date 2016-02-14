@@ -1,4 +1,12 @@
 <div class="jumbotron text-center"> <h1>Product Lists</h1>
+       <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a ui-sref="checkout">
+            <ngcart-summary template-url="components/ngcart/summary.html"></ngcart-summary>
+          </a>
+        </li>
+      </ul>
+
     <table class="table table-bordered table-striped" ng-show="product.products">
         <thead>
         <tr>
@@ -16,6 +24,7 @@
             <td>{{ item.description }}</td>
             <td>
                 <a ng-href="/products/{{ item._id }}" class="btn btn-info">Check</a>
+                <ngcart-addtocart id="{{item._id}}" quantity="1" quantity-max="9" name="{{item.title}}" price="{{item.price}}" template-url="components/ngcart/addtocart.html" data="product">Add to Cart</ngcart-addtocart>
             </td>
         </tr>
         </tbody>

@@ -23,6 +23,8 @@ angular.module('user.routes', ['ngRoute'])
                 controllerAs: 'user'
             })
 
+        
+
           
 
            ;
