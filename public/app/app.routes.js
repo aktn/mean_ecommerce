@@ -20,8 +20,8 @@ angular.module('app.routes', ['ngRoute'])
 
             .when('/checkout', {
             templateUrl : 'app/products/views/product-checkout.html',
-            controller  : 'productCheckoutController',
-            controllerAs: 'product'
+            controller  : 'productController',
+            controllerAs: 'items'
             });
 
         $locationProvider.html5Mode(true);
