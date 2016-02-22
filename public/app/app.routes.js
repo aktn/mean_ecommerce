@@ -4,7 +4,6 @@ angular.module('app.routes', ['ngRoute'])
 
         $routeProvider
 
-            // show all users.html
             .when('/products', {
                 templateUrl: 'app/products/views/product-list.html',
                 controller: 'productController',
@@ -19,9 +18,9 @@ angular.module('app.routes', ['ngRoute'])
             })
 
             .when('/checkout', {
-            templateUrl : 'app/products/views/product-checkout.html',
-            controller  : 'productController',
-            controllerAs: 'items'
+                templateUrl : 'app/products/views/product-checkout.html',
+                controller  : 'productController',
+                controllerAs: 'items'
             });
 
         $locationProvider.html5Mode(true);

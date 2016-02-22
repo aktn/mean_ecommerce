@@ -8,4 +8,6 @@ module.exports = function(app) {
     app.use('/api/login', require('./auth/user'));
     app.use('/api/admin/login', require('./auth/admin'));
     // app.use('/auth', require('./auth'));
+
+    app.use('/api/test', require('./auth/user'));
 };

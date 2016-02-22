@@ -5,5 +5,5 @@ module.exports = {
     },
     port      : process.env.PORT || 8080,
     seedDB      : false,
-    secret      : 'superSecret'
+    secret      : 'thisisasupersecretkeyxoxo'
 };

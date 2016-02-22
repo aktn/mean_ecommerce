@@ -63,10 +63,7 @@ apiRouter.use(function(req, res, next) {
         jwt.verify(token, superSecret, function(err, decoded) {
 
             if (err) {
-                res.status(403).send({
-                    success: false,
-                    message: 'Failed to authenticate token.'
-                });
+                return res.json({ success: false, message: 'Failed to authenticate token.' });    
             } else {
                 req.decoded = decoded;
                 next();
@@ -82,9 +79,14 @@ apiRouter.use(function(req, res, next) {
     }
 });
 
+apiRouter.get('/test', function(req, res) {
+        res.json({ message: 'hooray! welcome to our api!' });
+});
+   
+//Testing
 apiRouter.get('/me', function(req, res) {
         res.send(req.decoded);
-    });
+});
 
 module.exports = apiRouter;
 
