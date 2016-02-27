@@ -1,3 +1,4 @@
+var bodyParser = require('body-parser');
 var express = require('express');
 var controller = require('./user-auth.service.js');
 var router = express.Router();
@@ -34,7 +35,7 @@ apiRouter.post('/', function isAuthenticated(req, res) {
                 });
             } else {
                 var token = jwt.sign({
-                    name: user.name,
+                   // name: user.name,
                     email: user.email
                 }, superSecret, {
                     expiresInMinutes: 120
@@ -56,7 +57,9 @@ apiRouter.post('/', function isAuthenticated(req, res) {
 apiRouter.use(function(req, res, next) {
 
     console.log('Somebody just came to our app!');
-    var token = req.body.token || req.query.token || req.headers['x-access-token'];
+   
+    var token = (req.body && req.body.access_token) || (req.query && req.query.access_token) || req.headers['x-access-token'];
+
 
     if (token) {
 
@@ -79,14 +82,17 @@ apiRouter.use(function(req, res, next) {
     }
 });
 
+apiRouter.get('/me', function(req, res) {
+    res.send(req.decoded);
+});
+
+//testing
 apiRouter.get('/test', function(req, res) {
         res.json({ message: 'hooray! welcome to our api!' });
 });
+
+
    
-//Testing
-apiRouter.get('/me', function(req, res) {
-        res.send(req.decoded);
-});
 
 module.exports = apiRouter;
 

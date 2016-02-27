@@ -29,13 +29,9 @@ angular.module('userAuthService', [])
 
         authFactory.getUser = function() {
             if (AuthToken.getToken())
-                return $http.get('/api/me', { cache: true });
+                return $http.get('/api/login/me', { cache: true });
             else
-                return $q.reject({ message: 'User has no token.' });
-        };
-
-        authFactory.createSampleUser = function() {
-            $http.post('/api/sample');
+                return $q.reject({ message: 'There is no token.' });
         };
 
         return authFactory;
