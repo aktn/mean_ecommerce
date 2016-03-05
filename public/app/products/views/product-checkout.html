@@ -6,5 +6,22 @@
     <ngcart-cart template-url="components/ngcart/cart.html"></ngcart-cart>
   </div>
 
+  <div class="row">
+    <h3>Choose a payment method</h3>
+    <p class="help-block">{{ errors }}</p><br>
+    <div class="col-md-6">
+      
+
+      <form id="checkout" method="post" action="/checkout">
+        <braintree-dropin options="paymentOptions">Loading...</braintree-dropin>
+        <input type="submit" value="Pay">
+      </form>
+      
+    </div>
+  </div>
+</div>
   
 <footer></footer>
+
+
+

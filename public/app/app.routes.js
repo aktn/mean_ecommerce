@@ -19,7 +19,7 @@ angular.module('app.routes', ['ngRoute'])
 
             .when('/checkout', {
                 templateUrl : 'app/products/views/product-checkout.html',
-                controller  : 'productController',
+                controller  : 'ProductCheckoutCtrl',
                 controllerAs: 'items'
             });
 

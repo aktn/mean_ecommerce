@@ -20,7 +20,35 @@ angular.module('productCtrl',['productService'])
             .success(function(data) {
                 pdc.productData = data;
             });
+    })
+
+    .constant('clientTokenPath', '/api/payment/client_token')
+
+    .controller('ProductCheckoutCtrl', function($scope, $http, ngCart){
+
+
+        $scope.errors = '';
+
+        $scope.paymentOptions = {
+          onPaymentMethodReceived: function(payload) {
+            angular.merge(payload, ngCart.toObject());
+
+            payload.total = payload.totalCost;
+            $http.post('/api/orders', payload).then(function success () {
+              ngCart.empty(true);
+              $state.go('products');
+            }, 
+            function error (res) {
+              $scope.errors = res;
+            });
+          }
+        };
     });
+
+
+  ;
+
+
 
 
 

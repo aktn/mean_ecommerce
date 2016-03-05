@@ -18,7 +18,8 @@ angular.module('MEAN_Ecommerce',[
     'userProService',
     'userSignUpService',
     'ngCart',
-    'users'
+    'users',
+    'braintree-angular'
 
 ])
 
